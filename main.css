@@ -11,12 +11,17 @@ body {
     font-size: 25px;
   }
   
+  body {
+    background-color: white;
+    color: black;
+  }
+  
   .dark-mode {
     background-color: black;
     color: white;
   }
 
-
+  
 h1 {
     background-color: #cd69c9;
     color: #000000;
