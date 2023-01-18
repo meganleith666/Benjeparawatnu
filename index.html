@@ -4,38 +4,91 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-
+        <style>
+          body {
+            margin: 0;
+          }
+          .header {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+          }
+          </style>
         <link rel="stylesheet" href="main.css">
-        <title>Informatie paraveterinair studenten</title>
+        <title>Ben je para, wat nu?</title>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarMenu">
-                <ul class="navbar-nav">
-                  <li><a class="nav-link active" href="/">Home</a></li>
-                  <li><a class="nav-link" href="/MBO/">MBO</a></li>
-                  <li><a class="nav-link" href="/HBO/">HBO</a></li>
-                  <li><a class="nav-link" href="/Werkgelegenheden & cursussen/">Werkgelegenheden & cursussen</a></li>
-                  <li><a class="nav-link" href="/Contact">Contact</a></li>
-                </ul>
-              </div>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
             </div>
-          </nav>
-        <body class="light-theme"></body>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav">
+              <li><a class="nav-link active" href="/">Home</a></li>
+              <li><a class="nav-link" href="/MBO/">MBO</a></li>
+              <li><a class="nav-link" href="/HBO/">HBO</a></li>
+              <li><a class="nav-link" href="/Werkgelegenheden & cursussen/">Werkgelegenheden</a></li>
+              <li><a class="nav-link" href="/Contact">Contact</a></li>
+          </div>
+              <style>
+                .center {
+                  margin: 0;
+                  position: absolute;
+                  top: 50%;
+                  -ms-transform: translateY(-50%);
+                  transform: translateY(-50%);
+                }
+                </style>
+                
+                <div class="container">
+                  <div class="center">
+                  </div>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <body>
+
+      </body>
+      <div class="header">
+        <h1>Ben je para, wat nu?</h1>
+      </div>
+       
     <div class="container">
-        <h1 class="title">Informatie paraveterinair studenten</h1>
+
         <p>Gebruik deze website om informatie te krijgen over wat u na uw opleiding kan doen!</p>
     </div> 
+    <style>
+      body {
+        padding: 25px;
+        background-color: white;
+        color: black;
+        font-size: 25px;
+      }
+      
+      .dark-mode {
+        background-color: black;
+        color: white;
+      }
+      </style>
+      </head>
+      <body>
+      
+      <button onclick="myFunction()">Zet donkere modus aan</button>
+      
+      <script>
+      function myFunction() {
+         var element = document.body;
+         element.classList.toggle("dark-mode");
+      }
+      </script>
+      
+      </body>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-
-        <div class="container">
-        <img src="yuverta.jpg" alt="Yuverta">
       </div>
     </body>
 </html>
