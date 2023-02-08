@@ -4,84 +4,10 @@
     font-family: Arial, Helvetica, sans-serif;
 } 
 
-:root {
-  --text-color-light: #222;
-  --bkg-color-light : #fff;
-
-  --text-color-dark : #eee;
-  --bkg-color-dark  : #121212;
-
-  --text-color      : var(--text-color-light);
-  --bkg-color       : var(--bkg-color-light);
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    --text-color: var(--text-color-dark);
-    --bkg-color : var(--bkg-color-dark);
-  }
-}
-body.dark-theme {
-  --text-color: var(--text-color-dark);
-  --bkg-color : var(--bkg-color-dark);
-}
-
-
-body.light-time {
-  --text-color:var(--text-color-light);
-  --bkg-color:var(--bkg-color-light);
-}
-
 body {
-  background-color: var(--bkg-color);
-  font-family: Helvetica, Arial, sans-serif;
+  background: rgb(0, 0, 0);
+  font: 100% system-ui;
 }
-
-h1,
-p {
-  color: var(--text-color);
-}
-
-  body {
-    background-color: white;
-    color: black;
-  }
-
-  body {
-    --text-color: #222;
-    --bkg-color: #fff;
-  }
-  
-  body.dark-theme {
-    --text-color: #eee;
-    --bkg-color: #121212;
-  }
-  
-  @media (prefers-color-scheme: dark) {
-    body {
-      --text-color: #eee;
-      --bkg-color: #121212;
-    }
-    body.light-theme {
-      --text-color: #222;
-      --bkg-color: #fff;
-    }
-  }
-  
-  * {
-    font-family: Helvetica, Arial, sans-serif;
-  }
-  
-  body {
-    background: var(--bkg-color);
-  }
-  
-  h1,
-  p {
-    color: var(--text-color);
-  }
-
-
 
 h1 {
     background-color: #cd69c9;
@@ -94,13 +20,8 @@ p {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-  background: #fff;
-  font: 100% system-ui;
-}
-
 h1,
 p {
-  color: rgb(174, 36, 179);
+  color: rgb(255, 255, 255);
 }
 
