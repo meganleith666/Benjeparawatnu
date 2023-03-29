@@ -101,3 +101,20 @@ a:active {
   background-color: transparent;
   text-decoration: underline;
 }
+
+
+.home-image {
+  display: inline-block;
+  vertical-align: top;
+  width: 300px;
+  height: 300px;
+  margin-right: px;
+  margin-top: 0px;    /* if you want it vertically middle of the navbar. */
+}
+.navigation-bar > a {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px;
+  height: 80px;        /* if you want it to take the full height of the bar */
+  line-height: 80px;    /* if you want it vertically middle of the navbar */
+}
