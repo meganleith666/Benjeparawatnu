@@ -124,3 +124,12 @@ a:active {
   height: 80px;
   line-height: 80px;
 }
+
+#has {
+  display: flex;
+  align-items: center;
+}
+
+#has p {
+  margin-left: 1em;
+}
