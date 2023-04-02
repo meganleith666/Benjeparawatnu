@@ -13,7 +13,7 @@
     margin: 0;
        }
   .header {
-    background-color: #cd69c9;
+    background-color: #F7A1FF;
     padding: 20px;
     text-align: center;
           }
@@ -68,14 +68,97 @@
   <h1>Contact</h1>
 </div>
 
-<div class="container"> 
-  <p>Voor meer vragen kunt u ons mailen! Wij antwoorden binnen 1-2 dagen.<br>
-    </br><a href="mailto:1S34708@yuverta.nl">Elin Troquet</a>; <a href="mailto:1S37856@yuverta.nl">Jessy Arets</a>; <a href="mailto:1S30731@yuverta.com">Megan Muris</a>         
-</p>
-</div>  
+<div class="flex items-center min-h-screen bg-gray-50 dark:bg-gray-900">
+<div class="container mx-auto">
+<div class="max-w-md mx-auto my-10 bg-white p-5 rounded-md shadow-sm">
+<div class="text-center">
+
+  <p class="text-gray-400 dark:text-gray-400">
+  Stuur ons een bericht via dit formulier! :)
+  </p>
+</div>
+<div class="m-7">
+  <form action="https://api.web3forms.com/submit" method="POST" id="form">
+    <input type="hidden" name="access_key" value="63a6cd11-e1eb-4829-9abd-87ff99a99d25" />
+    <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+    <input type="checkbox" name="botcheck" id="" style="display: none;" />
+
+<div class="mb-6">
+  <label for="name" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Naam</label>
+    <input type="text" name="name" id="name" placeholder="Jan Jansen" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+</div>
+<div class="mb-6">
+  <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Email address</label>
+    <input type="email" name="email" id="email" placeholder="jij@bedrijf.com" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+</div>
+<div class="mb-6">
+  <label for="message" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Uw bericht</label>
+
+    <textarea rows="5" name="message" id="message" placeholder="Uw bericht" class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" required></textarea>
+</div>
+<div class="mb-6">
+  <button type="submit" class="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none">
+    Verstuur
+  </button>
+</div>
+  <p class="text-base text-center text-gray-400" id="result"></p>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+const form = document.getElementById("form");
+const result = document.getElementById("result");
+
+form.addEventListener("submit", function (e) {
+  const formData = new FormData(form);
+  e.preventDefault();
+  var object = {};
+  formData.forEach((value, key) => {
+    object[key] = value;
+  });
+  var json = JSON.stringify(object);
+  result.innerHTML = "Even geduld a.u.b...";
+
+  fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json"
+    },
+    body: json
+  })
+  .then(async (response) => {
+    let json = await response.json();
+    if (response.status == 200) {
+      result.innerHTML = json.message;
+      result.classList.remove("text-gray-500");
+      result.classList.add("text-green-500");
+      } else {
+      console.log(response);
+      result.innerHTML = json.message;
+      result.classList.remove("text-gray-500");
+      result.classList.add("text-red-500");
+      }
+    })
+  .catch((error) => {
+    console.log(error);
+    result.innerHTML = "Er is iets misgegaan! :(";
+    })
+    .then(function () {
+      form.reset();
+      setTimeout(() => {
+      result.style.display = "none";
+      }, 5000);
+    });
+});
+</script>
         
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZEZIhB6Y6Ygvi4G4Q2swV" crossorigin="anonymous"></script>
+
 </body>
 </html>
