@@ -5,17 +5,17 @@
 }
 
 body {
-  background: rgb(255, 255, 255);
+  background: rgb(246,151,250);
+  background: linear-gradient(90deg, rgba(246,151,250,1) 0%, rgba(106,148,233,1) 100%);
   font: 100% system-ui;
 }
 
 h1 {
-  background-color: #F7A1FF;
   color: #000000;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(0, 0, 0);
@@ -93,25 +93,25 @@ p {
 }
 
 a:link {
-  color: rgb(230, 101, 203);
+  color: rgb(0, 0, 0);
   background-color: transparent;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:visited {
-  color: rgb(218, 105, 240);
+  color: rgb(0, 0, 0);
   background-color: transparent;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:hover {
-  color: rgb(169, 106, 217);
+  color: rgb(0, 0, 0);
   background-color: transparent;
   text-decoration: underline;
 }
 
 a:active {
-  color: rgb(145, 105, 240);
+  color: rgb(0, 0, 0);
   background-color: transparent;
   text-decoration: underline;
 }
