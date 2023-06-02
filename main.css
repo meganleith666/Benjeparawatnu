@@ -5,8 +5,7 @@
 }
 
 body {
-  background: rgb(246,151,250);
-  background: linear-gradient(90deg, rgba(246,151,250,1) 0%, rgba(106,148,233,1) 100%);
+  background: #FFF0F5;
   font: 100% system-ui;
 }
 
